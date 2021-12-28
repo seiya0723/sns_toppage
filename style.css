@@ -1,0 +1,155 @@
+/* title area */
+
+.title_area {
+    height:100vh;
+
+    /* https://www.grabient.com/ */
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+.title_content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+
+    text-align:center;
+}
+
+.title {
+    font-size:2.5rem;
+    color:white;
+
+    text-shadow:
+        black 2px 0px,  black -2px 0px,
+        black 0px -2px, black 0px 2px,
+        black 2px 2px , black -2px 2px,
+        black 2px -2px, black -2px -2px,
+        black 1px 2px,  black -1px 2px,
+        black 1px -2px, black -1px -2px,
+        black 2px 1px,  black -2px 1px,
+        black 2px -1px, black -2px -1px;
+}
+.sub_title {
+    font-size:1.25rem;
+    color:white;
+}
+
+
+
+
+/* feature area */
+
+
+.feature_area {
+    padding:2rem;
+
+}
+.feature_title {
+    text-align:center;
+
+}
+
+.feature_row{
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.feature_col{
+    width:calc(100%/5);
+}
+.feature_col_inner {
+
+    background:orange;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+
+    /* 【TIPS】display:flexの直下の子要素はwidthが指定されており、それとpaddingやmarginを組み合わせてしまうと、分割が乱れるため、さらに子要素にpaddingを使用する。*/
+    padding:1rem;
+    margin:1rem;
+
+    /* ここに position:relative; がないと、.feature_col_bgはタイトルに覆いかぶさる。*/
+    position:relative;
+}
+
+.feature_col_bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    font-size:3rem;
+
+    color:white;
+    /* 不透明度の指定 */
+    opacity:0.25;
+
+}
+
+.feature_col_title {
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+}
+.feature_col_content {
+}
+
+
+/* feature area sp mode */
+@media (max-width:800px){
+    .feature_col{
+        width:calc(100%/2);
+    }
+
+}
+
+
+
+/* terms area */
+
+.terms_title {
+    text-align:center;
+    
+}
+
+/* サイト利用規約・リンク表示 */
+.terms_area{
+    padding:1rem;
+    background:forestgreen;
+    color:black;
+}
+.terms{
+    height:60vh;
+    overflow:auto;
+    background:yellowgreen;
+    padding:1.25rem;
+    margin:1rem;
+
+}
+.service_link_area{
+    text-align:center;
+    padding:2rem 0;
+}
+.service_link{
+    font-size:2rem;
+    color:white;
+    border:solid 0.2rem white;
+    border-radius:0.5rem;
+    padding:0.75rem 1.25rem;
+
+    /* 遅延描画のtransitionを使えば、カンタンにアニメーションが実現できる。 */
+    transition:0.2s;
+
+}
+.service_link:hover{
+    color:forestgreen;
+    text-decoration: none;
+    background:white;
+
+    transition:0.2s;
+
+}
+
+
+
